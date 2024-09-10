@@ -5,6 +5,7 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { createGoalRoute } from './routes/create-goal'
+import { createCompletionRoute } from './routes/create-goal-completion'
 import { getPendingGoalsRoute } from './routes/get-pending-goals'
 import fastifyCors from '@fastify/cors'
 
@@ -19,6 +20,7 @@ app.register(fastifyCors, {
 
 app.register(createGoalRoute)
 app.register(getPendingGoalsRoute)
+app.register(createCompletionRoute)
 
 app
   .listen({
