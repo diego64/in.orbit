@@ -1,11 +1,14 @@
 import { Dialog } from './components/ui/dialog'
 import { CreateGoal } from './components/create-goal'
-import { EmptyGoals } from './components/empty-goal'
+import { Summary } from './components/summary'
+//import { EmptyGoals } from './components/empty-goal'
 
 export function App() {
   return (
     <Dialog>
-      <EmptyGoals />
+      {/*<EmptyGoals />*/}
+
+      <Summary />
 
       <CreateGoal />
     </Dialog>
