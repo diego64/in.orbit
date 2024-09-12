@@ -73,7 +73,7 @@ export function CreateGoal() {
               <Input
                 id="title"
                 autoFocus
-                placeholder="Devocional, estudar, ouvir música, etc..."
+                placeholder="Devocional, estudar, etc..."
                 {...register('title')}
               />
 
