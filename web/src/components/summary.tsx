@@ -65,13 +65,6 @@ export function Summary() {
 
       <Separator />
 
-      <div className="flex flex-wrap gap-3">
-        <OutlineButton>
-          <Plus className="size-4 text-zinc-600" />
-          Devocional
-        </OutlineButton>
-      </div>
-
       <div className="flex flex-col gap-6">
         <h2 className="text-xl font-medium">Sua semana</h2>
 
