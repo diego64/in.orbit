@@ -4,7 +4,6 @@ import { DialogTrigger } from './ui/dialog'
 import { CheckCircle2, Plus } from 'lucide-react'
 import { Progress, ProgressIndicator } from './ui/progress-bar'
 import { Separator } from './ui/separator'
-import { OutlineButton } from './ui/outline-button'
 import { getSummary } from '../http/get-summary'
 
 import { useQuery } from '@tanstack/react-query'
