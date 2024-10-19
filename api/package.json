@@ -4,14 +4,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch --env-file .env src/http/server.ts",
-    "seed": "tsx --env-file .env src/db/seed.ts"
+    "seed": "tsx --env-file .env src/db/seed.ts",
+    "format": "biome format src --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "^1.9.4",
     "@fastify/cors": "^10.0.1",
     "@types/node": "^22.5.4",
     "drizzle-kit": "^0.24.2",
