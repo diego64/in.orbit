@@ -21,8 +21,8 @@ app.setSerializerCompiler(serializerCompiler)
 app.register(fastifySwagger, {
   openapi: {
     info: {
-      title: "in.orbit",
-      version: "1.0.0"
+      title: 'in.orbit',
+      version: '1.0.0',
     },
   },
   transform: jsonSchemaTransform,
@@ -33,7 +33,7 @@ app.register(fastifyCors, {
 })
 
 app.register(fastifySwaggerUi, {
-  routePrefix: "/docs",
+  routePrefix: '/docs',
 })
 
 app.register(createGoalRoute)
