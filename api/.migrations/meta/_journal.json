@@ -15,6 +15,20 @@
       "when": 1725927062142,
       "tag": "0001_peaceful_tigra",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1729956045636,
+      "tag": "0002_big_lady_ursula",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1729956195250,
+      "tag": "0003_lean_gladiator",
+      "breakpoints": true
     }
   ]
 }

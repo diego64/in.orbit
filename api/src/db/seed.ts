@@ -1,21 +1,28 @@
 import { client, db } from '.'
-import { goalCompletions, goals } from './schema'
+import { goalCompletions, goals, users } from './schema'
 import dayjs from 'dayjs'
 
 async function seed() {
   await db.delete(goalCompletions)
   await db.delete(goals)
 
+  const [user] = await db.insert(users).values({
+    name: 'John Doe',
+    externalAccountId: 613254761,
+    avatarUrl: 'https://github.com/diego64.png'
+  }).returning()
+
   const result = await db
     .insert(goals)
     .values([
-      { title: 'Devocional', desiredWeeklyFrequency: 5 },
-      { title: 'Estudar', desiredWeeklyFrequency: 5 },
+      { userId: user.id, title: 'Devocional', desiredWeeklyFrequency: 5 },
+      { userId: user.id, title: 'Estudar', desiredWeeklyFrequency: 5 },
       {
+        userId: user.id,
         title: 'Atualizar tabelas de controle financeiro',
         desiredWeeklyFrequency: 3,
       },
-      { title: 'Acordar cedo', desiredWeeklyFrequency: 1 },
+      { userId: user.id, title: 'Acordar cedo', desiredWeeklyFrequency: 1 },
     ])
     .returning()
 
