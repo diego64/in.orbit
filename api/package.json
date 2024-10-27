@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "tsx watch --env-file .env src/http/server.ts",
     "seed": "tsx --env-file .env src/db/seed.ts",
-    "format": "biome format src --write"
+    "format": "biome format src --write",
+    "pretest": "npm run db:migrate:test",
+    "pretest:whatch": "npm run db:migrate:test",
+    "db:migrate:test": "dotenv -e .env.test -- drizzle-kit migrate",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +20,7 @@
     "@biomejs/biome": "^1.9.4",
     "@fastify/cors": "^10.0.1",
     "@types/node": "^22.5.4",
+    "dotenv-cli": "^7.4.2",
     "drizzle-kit": "^0.26.2",
     "fastify-type-provider-zod": "^4.0.2",
     "tsx": "^4.19.0",
@@ -30,6 +36,7 @@
     "fastify": "^5.0.0",
     "jose": "^5.9.6",
     "postgres": "^3.4.4",
+    "vitest": "^2.1.3",
     "zod": "^3.23.8"
   }
 }
