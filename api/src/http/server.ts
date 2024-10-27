@@ -12,6 +12,7 @@ import { getWeekSummaryRoute } from './routes/get-week-summary'
 import { fastifyCors } from '@fastify/cors'
 import { fastifySwagger } from '@fastify/swagger'
 import { fastifySwaggerUi } from '@fastify/swagger-ui'
+import { authenticateFromGithubRoute } from './routes/authenticate-from-github'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -22,7 +23,7 @@ app.register(fastifySwagger, {
   openapi: {
     info: {
       title: 'in.orbit',
-      version: '1.0.0',
+      version: '2.1.8',
     },
   },
   transform: jsonSchemaTransform,
@@ -40,6 +41,7 @@ app.register(createGoalRoute)
 app.register(getPendingGoalsRoute)
 app.register(createCompletionRoute)
 app.register(getWeekSummaryRoute)
+app.register(authenticateFromGithubRoute)
 
 app
   .listen({
