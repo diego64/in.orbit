@@ -37,7 +37,7 @@ app.register(fastifyCors, {
 })
 
 app.register(fastifyJwt, {
-  secret: env.JWT_SECRET
+  secret: env.JWT_SECRET,
 })
 
 app.register(fastifySwaggerUi, {

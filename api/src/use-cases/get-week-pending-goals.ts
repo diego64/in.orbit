@@ -7,7 +7,9 @@ interface GetWeekPendingGoalsRequest {
   userId: string
 }
 
-export async function getWeekPendingGoals({ userId }: GetWeekPendingGoalsRequest ) {
+export async function getWeekPendingGoals({
+  userId,
+}: GetWeekPendingGoalsRequest) {
   const firstDayOfWeek = dayjs().startOf('week').toDate()
   const lastDayOfWeek = dayjs().endOf('week').toDate()
 
@@ -20,10 +22,7 @@ export async function getWeekPendingGoals({ userId }: GetWeekPendingGoalsRequest
         createdAt: goals.createdAt,
       })
       .from(goals)
-      .where(and(
-        lte(goals.createdAt, lastDayOfWeek),
-        eq(goals.userId, userId)
-      ))
+      .where(and(lte(goals.createdAt, lastDayOfWeek), eq(goals.userId, userId)))
   )
 
   const goalCompletionCounts = db.$with('goal_completion_counts').as(

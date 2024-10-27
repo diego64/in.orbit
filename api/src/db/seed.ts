@@ -6,11 +6,14 @@ async function seed() {
   await db.delete(goalCompletions)
   await db.delete(goals)
 
-  const [user] = await db.insert(users).values({
-    name: 'John Doe',
-    externalAccountId: 613254761,
-    avatarUrl: 'https://github.com/diego64.png'
-  }).returning()
+  const [user] = await db
+    .insert(users)
+    .values({
+      name: 'John Doe',
+      externalAccountId: 613254761,
+      avatarUrl: 'https://github.com/diego64.png',
+    })
+    .returning()
 
   const result = await db
     .insert(goals)

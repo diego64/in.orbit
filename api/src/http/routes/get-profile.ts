@@ -10,14 +10,14 @@ export const getProfileRoute: FastifyPluginAsyncZod = async app => {
         tags: ['auth'],
         description: 'Get authenticated user profile',
         response: {
-          200: z.object({ 
+          200: z.object({
             profile: z.object({
               id: z.string(),
               name: z.string().nullable(),
               email: z.string().nullable(),
               avatarUrl: z.string().url(),
-            })
-           }),
+            }),
+          }),
         },
       },
     },

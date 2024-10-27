@@ -20,10 +20,7 @@ export async function getWeekSummary({ userId }: GetWeekSummaryRequest) {
         createdAt: goals.createdAt,
       })
       .from(goals)
-      .where(and(
-        lte(goals.createdAt, lastDayOfWeek),
-        eq(goals.userId, userId)
-      ))
+      .where(and(lte(goals.createdAt, lastDayOfWeek), eq(goals.userId, userId)))
   )
 
   const goalsCompletedInWeek = db.$with('goals_completed_in_week').as(
