@@ -16,18 +16,21 @@ describe('get week summary', () => {
 
     const goal1 = await makeGoal({
       userId: user.id,
-      title: 'Meditar',
+      title: 'Devocional',
       desiredWeeklyFrequency: 2,
+      createdAt: weekStartsAt,
     })
     const goal2 = await makeGoal({
       userId: user.id,
-      title: 'Nadar',
+      title: 'Trabalhar',
       desiredWeeklyFrequency: 1,
+      createdAt: weekStartsAt,
     })
     const goal3 = await makeGoal({
       userId: user.id,
-      title: 'Ler',
+      title: 'Estudar',
       desiredWeeklyFrequency: 3,
+      createdAt: weekStartsAt,
     })
 
     await makeGoalCompletion({
@@ -61,14 +64,14 @@ describe('get week summary', () => {
         completed: 4,
         goalsPerDay: expect.objectContaining({
           '2024-10-11': expect.arrayContaining([
-            expect.objectContaining({ title: 'Ler' }),
+            expect.objectContaining({ title: 'Estudar' }),
           ]),
           '2024-10-09': expect.arrayContaining([
-            expect.objectContaining({ title: 'Ler' }),
+            expect.objectContaining({ title: 'Estudar' }),
           ]),
           '2024-10-08': expect.arrayContaining([
-            expect.objectContaining({ title: 'Meditar' }),
-            expect.objectContaining({ title: 'Nadar' }),
+            expect.objectContaining({ title: 'Devocional' }),
+            expect.objectContaining({ title: 'Trabalhar' }),
           ]),
         }),
       }),
