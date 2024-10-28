@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest'
 import { makeUser } from '../../tests/factories/make-user'
 import { makeGoal } from '../../tests/factories/make-goal'
 import { makeGoalCompletion } from '../../tests/factories/make-goal-completion'
-import { getWeekPendingGoals } from './get-week-pending-goals'
 import { getWeekSummary } from './get-week-summary'
 import dayjs from 'dayjs'
 
