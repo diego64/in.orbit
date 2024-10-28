@@ -29,6 +29,13 @@
       "when": 1729956195250,
       "tag": "0003_lean_gladiator",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1730152128620,
+      "tag": "0004_third_shinko_yamashiro",
+      "breakpoints": true
     }
   ]
 }
