@@ -10,6 +10,7 @@
   "paths": {
     "/goals": {
       "post": {
+        "operationId": "createGoal",
         "tags": [
           "goals"
         ],
@@ -58,6 +59,7 @@
     },
     "/pending-goals": {
       "get": {
+        "operationId": "getPendingGoals",
         "tags": [
           "goals"
         ],
@@ -111,6 +113,7 @@
     },
     "/completions": {
       "post": {
+        "operationId": "createCompletion",
         "tags": [
           "goals"
         ],
@@ -153,6 +156,7 @@
     },
     "/summary": {
       "get": {
+        "operationId": "getWeekSummary",
         "tags": [
           "goals"
         ],
@@ -234,6 +238,7 @@
     },
     "/auth/github": {
       "post": {
+        "operationId": "authenticateFromGithub",
         "tags": [
           "auth"
         ],
@@ -282,6 +287,7 @@
     },
     "/profile": {
       "get": {
+        "operationId": "getProfile",
         "tags": [
           "auth"
         ],
@@ -335,6 +341,7 @@
     },
     "/profile/gamification": {
       "get": {
+        "operationId": "getUserExperienceAndLevel",
         "tags": [
           "users",
           "gamification"

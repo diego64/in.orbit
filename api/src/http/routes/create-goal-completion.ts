@@ -10,6 +10,7 @@ export const createCompletionRoute: FastifyPluginAsyncZod = async app => {
       onRequest: [authenticateUserHook],
       schema: {
         tags: ['goals'],
+        operationId: 'createCompletion',
         description: 'Complete a goal',
         body: z.object({
           goalId: z.string(),
