@@ -1,15 +1,18 @@
 import { z } from 'zod'
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
+import { authenticateFromGithubCode } from '../../use-cases/authenticate-from-github-code'
 import { getUser } from '../../use-cases/get-user'
+import { authenticateUserHook } from '../hooks/authenticate-user'
 
 export const getProfileRoute: FastifyPluginAsyncZod = async app => {
   app.get(
     '/profile',
     {
+      onRequest: [authenticateUserHook],
       schema: {
         tags: ['auth'],
-        operationId: 'getProfile',
         description: 'Get authenticated user profile',
+        operationId: 'getProfile',
         response: {
           200: z.object({
             profile: z.object({
@@ -25,9 +28,7 @@ export const getProfileRoute: FastifyPluginAsyncZod = async app => {
     async (request, reply) => {
       const userId = request.user.sub
 
-      const { user } = await getUser({
-        userId,
-      })
+      const { user } = await getUser({ userId })
 
       return reply.status(200).send({ profile: user })
     }
