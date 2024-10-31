@@ -4,10 +4,10 @@ import { DialogTrigger } from '@radix-ui/react-dialog'
 import { Button } from './ui/button'
 import { Progress, ProgressIndicator } from './ui/progress-bar'
 import { Separator } from './ui/separator'
+import { PendingGoals } from './pending-goals'
 import type { GetSummaryResponse } from '../http/get-summary'
 import dayjs from 'dayjs'
-import ptBR from 'dayjs/locale/pt-BR'
-import { PendingGoals } from './pending-goals'
+import ptBR from 'dayjs/locale/pt-br'
 
 dayjs.locale(ptBR)
 
