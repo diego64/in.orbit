@@ -677,6 +677,3 @@ export function useGetUserExperienceAndLevel<TData = Awaited<ReturnType<typeof g
 
   return query;
 }
-
-
-
