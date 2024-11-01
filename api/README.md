@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img.shields.io/image/capa.PNG" width="300" alt="Capa" /></a>
+  <img src="img.shields.io/image/capa.PNG" width="500" alt="Capa" /></a>
 </p>
 
 <p align="center">
