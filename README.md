@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img.shields.io/image/home_page.PNG" width="500" alt="home_page" /></a>
+  <img src="img.shields.io/image/thumbnail.PNG" width="500" alt="home_page" /></a>
 </p>
 
 <p align="center">
