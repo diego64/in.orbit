@@ -37,6 +37,8 @@ Esta aplicação web permite que o usuário realize seu cadastro via GitHub para
 - [x] User gamification
 - [x] Access goals from past weeks
  
+---
+
 ## 🏷️ Getting Started
 
 To run this application, it is essential that you have Node.js and Docker installed on your device.

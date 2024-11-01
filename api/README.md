@@ -42,7 +42,9 @@ A aplicação foi desenvolvida utilizando diversas tecnologias do ecossistema Ja
 - [x] Goal registration
 - [x] List of goals
 - [x] Marking of goal accomplished
- 
+
+---
+
 ## 🏷️ Getting Started
 
 To run this application, it is essential that you have Node.js and Docker installed on your device.
